@@ -67,14 +67,7 @@ defmodule CurrencyConverter.MixProject do
       setup: ["deps.get", "ecto.setup"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind currency_converter", "esbuild currency_converter"],
-      "assets.deploy": [
-        "tailwind currency_converter --minify",
-        "esbuild currency_converter --minify",
-        "phx.digest"
-      ]
+      test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"]
     ]
   end
 end

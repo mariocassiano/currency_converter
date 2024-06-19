@@ -21,8 +21,9 @@ if System.get_env("PHX_SERVER") do
 end
 
 if config_env() == :prod do
+  # System.get_env("DATABASE_PATH") ||
   database_path =
-    System.get_env("DATABASE_PATH") ||
+    Path.expand(File.cwd!() <> "/database/currency_converter_dev.db") ||
       raise """
       environment variable DATABASE_PATH is missing.
       For example: /etc/currency_converter/currency_converter.db

@@ -11,6 +11,13 @@ config :currency_converter,
   ecto_repos: [CurrencyConverter.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+# Configure your database
+config :currency_converter, CurrencyConverter.Repo,
+  database: Path.expand("../database/currency_converter_dev.db", __DIR__),
+  pool_size: 5,
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true
+
 # Configures the endpoint
 config :currency_converter, CurrencyConverterWeb.Endpoint,
   url: [host: "localhost"],

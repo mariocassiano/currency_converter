@@ -26,6 +26,7 @@ erl_crash.dump
 currency_converter-*.tar
 
 # Database files
+/database/
 *.db
 *.db-*
 

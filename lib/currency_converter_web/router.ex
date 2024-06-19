@@ -7,6 +7,8 @@ defmodule CurrencyConverterWeb.Router do
 
   scope "/api", CurrencyConverterWeb do
     pipe_through :api
+
+    resources "/categories", CategoryController, except: [:new, :edit]
   end
 
   # Enable LiveDashboard in development

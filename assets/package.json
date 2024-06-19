@@ -1,5 +1,6 @@
 {
-  "scripts": {
-    "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild*"
-  }
+  "name": "myapp",
+  "version": "0.0.1",
+  "description": "placeholder package.json to pacify static buildpack",
+  "main": "js/app.js"
 }

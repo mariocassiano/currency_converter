@@ -1,6 +1,6 @@
 defmodule CurrencyConverter.Categories do
   @moduledoc """
-  The Categories context.
+  The Categories context......
   """
 
   import Ecto.Query, warn: false

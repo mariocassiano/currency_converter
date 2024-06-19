@@ -49,7 +49,10 @@ defmodule CurrencyConverterWeb.CategoryControllerTest do
   describe "update category" do
     setup [:create_category]
 
-    test "renders category when data is valid", %{conn: conn, category: %Category{id: id} = category} do
+    test "renders category when data is valid", %{
+      conn: conn,
+      category: %Category{id: id} = category
+    } do
       conn = put(conn, ~p"/api/categories/#{category}", category: @update_attrs)
       assert %{"id" => ^id} = json_response(conn, 200)["data"]
 
